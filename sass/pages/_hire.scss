@@ -1,0 +1,14 @@
+.hire {
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+    &__wrapper {
+        position: absolute;
+        top: 50%;
+        left: 10vh;
+        transform: translateY(-50%);
+        @include respond(tab-port) {
+            left: 3rem;
+        }
+    }
+}

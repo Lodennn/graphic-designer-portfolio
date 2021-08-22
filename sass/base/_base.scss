@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    @include respond(tab-land) {
+        font-size: 56.25%; // 1 rem = 9px | 9/16 = 56.25%
+    }
+    @include respond(tab-port) {
+        font-size: 50%; // 1 rem = 8px | 8/16 = 50% 
+    }
+    @include respond(big-desktop) {
+        font-size: 75%; // 1 rem = 12px | 12/16 = 75%
+    }
+}
+body {
+    @include prefixer(box-sizing, border-box, webkit moz o ms);
+    color: $color-grey-light-1;
+    font-family: $font-primary;
+    background-color: $color-primary;
+    background-image: linear-gradient(45deg, $color-black, transparent);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: url('../images/cursor.png'), auto;
+}
+
+/* Wrapper */
+.wrapper {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+    width: 0
+}

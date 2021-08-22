@@ -1,0 +1,35 @@
+.row {
+    max-width: 126rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+    @include respond(tab-port) {
+        width: auto;
+        flex-direction: column;
+    }
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+    [class^='col-'] {
+        &:not(:last-of-type) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+    .col-6 {
+        width: 50%;
+        padding: 0 2rem;
+        align-self: center;
+        @include respond(tab-port) {
+            padding: 0rem;
+        }
+    }
+}
+
+.container {
+    max-width: 100rem;
+    margin: 0 auto;
+    @include respond(tab-port) {
+        max-width: 50rem;
+    }
+}

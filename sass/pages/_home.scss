@@ -1,0 +1,48 @@
+/* Home */
+
+.home {
+    
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    &__intro {
+        margin-top: 9em;
+        // margin-left: 15em;
+        @include prefixer(mix-blend-mode, difference, webkit moz o ms);
+        position: relative;
+        z-index: 2;
+        @include respond(tab-port) {
+            margin-top: 7em;
+        }
+    }
+    &__quote {
+        margin-left: 3em;
+        display: inline-block;
+        font-size: 8rem;
+        font-weight: 100;
+        position: relative;
+        @include respond(tab-port) {
+            margin-left: 1em;
+        }
+        &-line {
+            position: absolute;
+            bottom: -.6rem;
+            left: 0;
+            width: 100%;
+            height: .2rem;
+            background: $color-grey-light-1;
+        }
+    }
+    &__img {
+        position: absolute;
+        bottom: 4rem;
+        right: 12rem;
+        z-index: -1;
+        @include prefixer(filter, url('#turb'), webkit moz ms o);
+        opacity: 0;
+        @include respond(tab-port) {
+            display: none;
+        }
+        // @include prefixer(transition, all .5s ease, webkit moz ms o);
+    }
+}
